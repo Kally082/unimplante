@@ -1,39 +1,38 @@
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
-const teamContainer = document.querySelector('.team-container');
-const teamMembers = document.querySelectorAll('.team-member');
+const btnLeft = document.querySelector(".btn-left"),
+      btnRight = document.querySelector(".btn-right"),
+      slider = document.querySelector("#slider"),
+      sliderSection = document.querySelectorAll(".slider-section");
 
-let currentIndex = 0;
-const teamCount = teamMembers.length;
-const memberWidth = teamMembers[0].offsetWidth + 30; // 150px + margin
+const totalWidth = sliderSection.length * 100;
+slider.style.width = `${totalWidth}%`;
 
-// Função para atualizar a posição do carrossel
-function updateCarousel() {
-    teamContainer.style.transform = `translateX(-${currentIndex * memberWidth}px)`;
+let operacion = 0,
+    counter = 0,
+    widthImg = 100 / sliderSection.length;
+
+btnLeft.addEventListener("click", moveToLeft);
+btnRight.addEventListener("click", moveToRight);
+
+setInterval(moveToRight, 7000);
+
+function moveToRight() {
+    counter++;
+    if (counter >= sliderSection.length) {
+        counter = 0;
+        operacion = 0;
+    } else {
+        operacion += widthImg;
+    }
+    slider.style.transform = `translateX(-${operacion}%)`;
 }
 
-// Evento de clique no botão anterior
-prevBtn.addEventListener('click', () => {
-    if (currentIndex > 0) {
-        currentIndex--;
+function moveToLeft() {
+    counter--;
+    if (counter < 0) {
+        counter = sliderSection.length - 1;
+        operacion = widthImg * counter;
     } else {
-        currentIndex = teamCount - 1;
+        operacion -= widthImg;
     }
-    updateCarousel();
-});
-
-// Evento de clique no botão próximo
-nextBtn.addEventListener('click', () => {
-    if (currentIndex < teamCount - 1) {
-        currentIndex++;
-    } else {
-        currentIndex = 0;
-    }
-    updateCarousel();
-});
-
-// Ajusta o tamanho do carrossel ao redimensionar a janela
-window.addEventListener('resize', () => {
-    memberWidth = teamMembers[0].offsetWidth + 30;
-    updateCarousel();
-});
+    slider.style.transform = `translateX(-${operacion}%)`;
+}
