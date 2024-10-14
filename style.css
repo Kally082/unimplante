@@ -18,21 +18,62 @@ header {
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: flex-end;
 }
 
 nav ul li {
   display: inline;
+  margin: 0px 15px 0px 15px;
 }
 
 nav ul li a {
   color: #000000;
   text-decoration: none;
-  font-weight: lighter;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: normal;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
 }
 
+#menu{
+  display: flex;
+  justify-content: flex-end;
+}
 
+#principal{
+  background-image: url(imagens/plano_fundo_dentes.png);
+  background-repeat: repeat;
+  background-size: 30%;
+  filter: opacity(30%);
+  font-size: 70px;
+  font-family: "Sedan SC", serif;
+  text-align: center;
+  padding: 90px;
+}
+
+#sobre-nos{
+  background-color: #B0BEC5;
+  font-family: "Lato", sans-serif;
+  font-weight: 350;
+}
+
+.secao{
+  font-size: 30px;
+}
+.paragrafos-secao{
+  font-size: 20px;
+}
+
+button{
+  background-color: #B0BEC5;
+  color: #274D73;
+  border-color: #274D73;
+  border-radius: 5px;
+  padding: 5px 10px 5px 10px;
+}
+
+.container{
+  width: 500px;
+  padding: 50px 80px 50px 80px;
+}
 footer {
   background-color: #333;
   color: white;
