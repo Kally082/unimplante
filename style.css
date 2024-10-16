@@ -3,6 +3,22 @@
   padding: 0;
   box-sizing: border-box;
 }
+html {
+  font-size: 14px;
+  scroll-behavior: smooth;
+}
+
+@media (max-width: 768px) {
+  html {
+    font-size: 12px;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+    font-size: 16px;
+  }
+}
 
 body {
   font-family: Arial, sans-serif;
@@ -14,13 +30,13 @@ header {
   background-color: #B0BEC5;
   height: 100px;
   align-content: center;
-  padding-right: 70px;
+  padding-right: 4vw;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  gap: 60px;
+  gap: 4vw;
 }
 
 nav ul li {
@@ -31,7 +47,7 @@ nav ul li a {
   color: #000000;
   text-decoration: none;
   font-weight: normal;
-  font-size: 32px;
+  font-size: 2rem;
   font-family: "Roboto", sans-serif;
 }
 nav ul li a:hover{
@@ -45,7 +61,7 @@ nav ul li a:hover{
 
 #principal {
   position: relative;
-  font-size: 120px;
+  font-size: 6rem;
   font-family: "Sedan SC", serif;
   text-align: center;
   align-content: center;
@@ -75,7 +91,7 @@ nav ul li a:hover{
   background-image: url(imagens/conjunto-de-vetores-de-espelho-de-ferramentas-odontologicas-inoxidavel-broca-e-pinca-com-vista-lateral-do-dente-no-fundo.png);
   background-size: 60vh;
   background-repeat: no-repeat;
-  background-position: calc(100% - 90px) bottom;
+  background-position: calc(100% - 7vw) bottom;
 }
 
 
@@ -85,12 +101,55 @@ nav ul li a:hover{
 }
 
 #servicos{
-  height: 70vh;
+  min-height: 70vh;
   background: #f5f5f5;
+}
+
+#nossa-equipe{
+  min-height: 50vh;
+  background: #f5f5f5;
+}
+
+#cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5vw;
+}
+
+.card {
+  background: #B0BEC5;
+  padding: 4vw 3vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+.card p {
+  margin-top: 40px;
+  font-size: 2rem;
+  font-weight: 400;
+  font-family: "Lato", sans-serif;
 }
 
 .subtitle{
   font-size: 3rem;
+  margin-bottom: 20px;
 }
 .paragrafos-secao{
   font-size: 1.9rem;
@@ -121,6 +180,10 @@ nav ul li a:hover{
 .secao3{
   width: 100%;
   padding: 130px 200px 0px 200px
+}
+.secao4{
+  width: 100%;
+  padding: 130px 200px 20px 200px
 }
 footer {
   background-color: #333;
