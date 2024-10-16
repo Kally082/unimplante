@@ -138,7 +138,29 @@ footer .social-links img {
   margin: 0 10px;
 }
 
+#links-footer {
+  text-align: center;
+}
 
+#links-footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+#links-footer li {
+  display: inline;
+  margin: 0 15px;
+}
+
+#links-footer a {
+  text-decoration: none;
+  color: white;
+  font-weight: normal;
+}
+
+#links-footer a:hover {
+  color: #B0BEC5;
+}
 /* slider */
 
 .container-carousel {
