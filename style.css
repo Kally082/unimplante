@@ -49,7 +49,7 @@ nav ul li a:hover{
   font-family: "Sedan SC", serif;
   text-align: center;
   align-content: center;
-  height: 65vh;
+  min-height: 65vh;
   overflow: hidden;
   font-weight: normal;
 }
@@ -71,16 +71,16 @@ nav ul li a:hover{
   background-color: #B0BEC5;
   font-family: "Lato", sans-serif;
   font-weight: 350;
-  height: 70vh;
+  min-height: 70vh;
   background-image: url(imagens/conjunto-de-vetores-de-espelho-de-ferramentas-odontologicas-inoxidavel-broca-e-pinca-com-vista-lateral-do-dente-no-fundo.png);
-  background-size: 30%;
+  background-size: 60vh;
   background-repeat: no-repeat;
   background-position: calc(100% - 90px) bottom;
 }
 
 
 #nosso-consultorio{
-  height: 70vh;
+  min-height: 70vh;
   background: #f5f5f5;
 }
 
@@ -89,7 +89,7 @@ nav ul li a:hover{
   background: #f5f5f5;
 }
 
-.secao{
+.subtitle{
   font-size: 3rem;
 }
 .paragrafos-secao{
@@ -110,13 +110,17 @@ nav ul li a:hover{
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
-.container1{
-  width: 50%;
+.secao1{
+  width: 50vw;
   padding: 130px 0px 130px 200px;
 }
-.container2{
+.secao2{
   width: 100%;
-  padding: 50px 80px;
+  padding: 130px 200px 0px 200px;
+}
+.secao3{
+  width: 100%;
+  padding: 130px 200px 0px 200px
 }
 footer {
   background-color: #333;
@@ -141,7 +145,7 @@ footer .social-links img {
   position: relative;
   background-color: #e0e0e0;
   overflow: hidden;
-  width: 90%;
+  width: 100%;
   height: 70vh;
   margin: auto;
 }
