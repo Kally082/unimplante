@@ -67,7 +67,7 @@ nav ul li a:hover{
   filter: opacity(30%);
   z-index: -1;
 }
-#sobre-nos{
+#sobre-nos {
   background-color: #B0BEC5;
   font-family: "Lato", sans-serif;
   font-weight: 350;
@@ -75,8 +75,10 @@ nav ul li a:hover{
   background-image: url(imagens/conjunto-de-vetores-de-espelho-de-ferramentas-odontologicas-inoxidavel-broca-e-pinca-com-vista-lateral-do-dente-no-fundo.png);
   background-size: 30%;
   background-repeat: no-repeat;
-  background-position: calc(100% - 40px) center;
+  background-position: right bottom;
+  padding-right: 40px;
 }
+
 
 #nosso-consultorio{
   height: 70vh;
