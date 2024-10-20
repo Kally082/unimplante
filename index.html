@@ -17,9 +17,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Sedan+SC&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/> -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0">
-    <link rel="stylesheet" href="swiper.css">
+
 </head>
 <body>
 
@@ -53,23 +51,17 @@
     <div id="nosso-consultorio">
       <div class="secao2">
         <h2 class="subtitle">Nosso Consultório</h2>
-        
-        <div class="swiper">
-          <div class="swiper-wrapper">
-              <div class="swiper-slide">
-                <img src="imagens/consultorio-01.jpg">
-              </div>
-              <div class="swiper-slide">
-                <img src="imagens/consultorio-02.jpg">
-              </div>
-              <div class="swiper-slide">
-                <img src="imagens/consultorio-03.jpg">
-              </div>
-          
+        <section class="regular slider">
+          <div>
+            <img src="imagens/consultorio-01.jpg">
           </div>
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-        </div>
+          <div>
+            <img src="imagens/consultorio-02.jpg">
+          </div>
+          <div>
+            <img src="imagens/consultorio-03.jpg">
+          </div>
+        </section>
         
 
       </div>
@@ -102,21 +94,26 @@
     <div id="nossa-equipe">
       <div class="secao4">
         <h2 class="subtitle">Nossa Equipe</h2>
-        <div class="slider-wrapper">
-          <button id="prev-slide" class="slide-button material-symbols-rounded">chevron_left</button>
-          <div class="image-list">
-            <img src="imagens/equipe1.jpg" alt="" class="image-item">
-            <img src="imagens/equipe2.jpg" alt="" class="image-item">
-            <img src="imagens/equipe3.jpg" alt="" class="image-item">
-            <img src="imagens/equipe4.jpg" alt="" class="image-item">
-
-            <img src="imagens/equipe1.jpg" alt="" class="image-item">
-            <img src="imagens/equipe2.jpg" alt="" class="image-item">
-            <img src="imagens/equipe3.jpg" alt="" class="image-item">
-            <img src="imagens/equipe4.jpg" alt="" class="image-item">
+          <div class="regular2 slider">
+            <div>
+              <a href="#nossa-equipe"><img class="team" src="imagens/equipe1.jpg" alt=""></a>
+            </div>
+            <div>
+              <a href="#nossa-equipe"><img class="team" src="imagens/equipe2.jpg" alt=""></a>
+            </div>
+            <div>
+              <a href="#nossa-equipe"><img class="team" src="imagens/equipe3.jpg" alt=""></a>
+            </div>
+            <div>
+              <a href="#nossa-equipe"><img class="team" src="imagens/equipe4.jpg" alt=""></a>
+            </div>
+            <div>
+              <!-- adicionar mais slides ou diminuir a qtd de slidesToShow -->
+            </div>
           </div>
-          <button id="next-slide" class="slide-button material-symbols-rounded">chevron_right</button>
-        </div>
+
+
+          
       </div>
     </div>
 
@@ -137,7 +134,9 @@
         </ul>
       </div>
     </footer>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <script src="script.js"></script>
+
+    <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <script src="slick.js" type="text/javascript" charset="utf-8"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>
