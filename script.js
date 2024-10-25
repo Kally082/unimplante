@@ -36,3 +36,23 @@ $(document).on('ready', function() {
         ]
       });
   });
+
+document.getElementById("card-limpeza").addEventListener("click", function(event) {
+  event.preventDefault();
+  window.open('/limpeza.html', '_blank');
+});
+
+document.getElementById("card-caries").addEventListener("click", function(event) {
+  event.preventDefault();
+  window.open('/caries.html', '_blank');
+});
+
+document.getElementById("card-canal").addEventListener("click", function(event) {
+  event.preventDefault();
+  window.open('/canal.html', '_blank');
+});
+
+document.getElementById("card-protese").addEventListener("click", function(event) {
+  event.preventDefault();
+  window.open('/protese.html', '_blank');
+});
