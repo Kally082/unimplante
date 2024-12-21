@@ -39,22 +39,32 @@ $(document).on('ready', function () {
 
 const basePath = window.location.origin + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
 
-document.getElementById("card-limpeza").addEventListener("click", function (event) {
+document.getElementById("card-geral").addEventListener("click", function (event) {
   event.preventDefault();
-  window.open(basePath + '/limpeza.html', '_blank');
+  window.open(basePath + '/geral.html', '_blank');
 });
 
-document.getElementById("card-caries").addEventListener("click", function (event) {
+document.getElementById("card-estetica").addEventListener("click", function (event) {
   event.preventDefault();
-  window.open(basePath + '/caries.html', '_blank');
+  window.open(basePath + '/estetica.html', '_blank');
 });
 
-document.getElementById("card-canal").addEventListener("click", function (event) {
+document.getElementById("card-implantodontia").addEventListener("click", function (event) {
   event.preventDefault();
-  window.open(basePath + '/canal.html', '_blank');
+  window.open(basePath + '/implantodontia.html', '_blank');
 });
 
-document.getElementById("card-protese").addEventListener("click", function (event) {
+document.getElementById("card-endodontia").addEventListener("click", function (event) {
   event.preventDefault();
-  window.open(basePath + '/protese.html', '_blank');
+  window.open(basePath + '/endodontia.html', '_blank');
+});
+
+document.getElementById("card-cirurgias").addEventListener("click", function (event) {
+  event.preventDefault();
+  window.open(basePath + '/cirurgias.html', '_blank');
+});
+
+document.getElementById("card-avancados").addEventListener("click", function (event) {
+  event.preventDefault();
+  window.open(basePath + '/avancados.html', '_blank');
 });

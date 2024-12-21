@@ -241,45 +241,76 @@ nav ul li a:hover {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
 }
+
 footer {
   background-color: #333;
   color: white;
   padding: 20px;
-  text-align: center;
 }
 
-footer p {
-  margin-bottom: 10px;
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 150px;
+}
+
+.footer-column {
+  text-align: left;
+}
+
+.footer-right {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-right h3 {
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-align: left;
+}
+
+.footer-columns {
+  display: flex;
+  gap: 30px;
+  max-width: 30vw; 
+}
+
+.footer-column iframe {
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+  max-width: 30vw; 
+}
+
+footer .social-links {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 
 footer .social-links img {
   width: 30px;
-  margin: 0 10px;
 }
 
-#links-footer {
-  text-align: center;
-}
-
-#links-footer ul {
+footer ul {
   list-style: none;
   padding: 0;
 }
 
-#links-footer li {
-  display: inline;
-  margin: 0 15px;
+footer li {
+  margin: 10px 0;
 }
 
-#links-footer a {
+footer a {
   text-decoration: none;
   color: white;
-  font-weight: normal;
 }
 
-#links-footer a:hover {
+footer a:hover {
   color: #B0BEC5;
 }
+
 
 .team{
   width: 15vw !important; 
