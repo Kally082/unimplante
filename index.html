@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Unimplante</title>
+    <link rel="icon" href="">
     <link rel="stylesheet" href="style.css">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,8 +44,8 @@
       <div class="secao1">
         <h2 class="subtitle">Sobre Nós</h2><br>
         <p class="paragrafos-secao">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus lorem mauris, ornare vel pellentesque vel, scelerisque vel massa. Praesent et massa porta libero bibendum fringilla et  turpis egestas. Morbi purus odio, blandit vel velit id, porta gravida velit.</p>
-        <div style="height: 6vh;"></div>
-        <a class="botao" href="#">Localização</a>
+        <div style="height: 6vh; "></div>
+        <a class="botao" href="https://maps.app.goo.gl/qVhsYCXLWGMwQ4YT6" target="_blank">Localização</a>
       </div>
     </div>
 
@@ -71,30 +72,30 @@
       <div class="secao3">
         <h2 class="subtitle">Serviços</h2>
         <div id="cards">
-          <div id="card-geral" class="card">
+          <a id="card-geral" class="card">
             <img src="imagens/geral.jpg" alt="">
             <p>Clínica Geral</p>
-          </div>
-          <div id="card-estetica" class="card">
+          </a>
+          <a id="card-estetica" class="card">
             <img src="imagens/estetica.jpg" alt="">
             <p>Estética Dental</p>
-          </div>
-          <div id="card-implantodontia" class="card">
+          </a>
+          <a id="card-implantodontia" class="card">
             <img src="imagens/implante.jpg" alt="">
             <p>Implantodontia</p>
-          </div>
-          <div id="card-endodontia" class="card">
+          </a>
+          <a id="card-endodontia" class="card">
             <img src="imagens/Endodontia.png" alt="">
             <p>Endodontia e Tratamentos Específicos</p>
-          </div>
-          <div id="card-cirurgias" class="card">
+          </a>
+          <a id="card-cirurgias" class="card">
             <img src="imagens/cirurgias.jpg" alt="">
             <p>Cirurgias</p>
-          </div>
-          <div id="card-avancados" class="card">
-            <img src="imagens/avanzados.jpg" alt="">
+          </a>
+          <a id="card-odontologia" class="card">
+            <img src="imagens/avancados.jpg" alt="">
             <p>Odontologia Especializada</p>
-          </div>
+          </a>
         </div>
       </div>
     </div>
@@ -104,10 +105,11 @@
         <h2 class="subtitle">Nossa Equipe</h2>
           <div class="regular2 slider">
             <div>
-              <a href="#nossa-equipe"><img class="team" src="imagens/equipe1.jpg" alt=""></a>
+              <a href="#nossa-equipe"><img class="team" src="imagens/dra_ana.jpg" alt="" title="Dr. Ana de Lourdes Menezes Batista da Costa"></a>
             </div>
+            
             <div>
-              <a href="#nossa-equipe"><img class="team" src="imagens/equipe2.jpg" alt=""></a>
+              <a href="#nossa-equipe"><img class="team" src="imagens/equipe3.jpg" alt="" title="Dr. José Norberto Bittencourt"></a>
             </div>
             <div>
               <a href="#nossa-equipe"><img class="team" src="imagens/equipe3.jpg" alt=""></a>
@@ -156,6 +158,177 @@
         </div>
       </div>
     </footer>
+    <!-- Modal de Clínica Geral -->
+    <div id="modal-geral" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Clínica Geral</h3>
+        <div class="item-dentistas">
+          <img src="imagens/dra_marina.jpg" alt="" class="img-dentista">
+          <div class="info-dentista">
+            <h2 class="nome-dentista">Dra. Marina de Omena Souza Costa</h2>
+            <p class="descricao-dentista">Especialista en Clínica Geral.</p>
+            <p class="descricao-dentista">CRO 6153</p>
+            
+            <a href="#" class="btn-dentista">Agendar Consulta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de Estética Dental -->
+    <div id="modal-estetica" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Estética Dental</h3>
+        <div class="item-dentistas">
+          <img src="imagens/dra_ana.jpg" alt="" class="img-dentista">
+          <div class="info-dentista">
+            <h2 class="nome-dentista">Dra. Ana de Lourdes Menezes Batista da Costa</h2>
+            <p class="descricao-dentista">Especialista em Implantodontia.</p>
+            <p class="descricao-dentista">Especialista em Próteses sobre implantes e dentes.</p>
+            <p class="descricao-dentista">Especialista em Odontologia estética e restauradora.</p>
+            <p class="descricao-dentista">CRO 1188</p>
+            
+            <a href="#" class="btn-dentista">Agendar Consulta</a>
+          </div>
+        </div>
+        <hr>
+        <div class="item-dentistas">
+          <img src="imagens/equipe3.jpg" alt="" class="img-dentista">
+          <div class="info-dentista">
+            <h2 class="nome-dentista">Dr. José Norberto Bittencourt</h2>
+            <p class="descricao-dentista">Especialista em Implantodontia.</p>
+            <p class="descricao-dentista">Especialista em Próteses sobre implantes e dentes.</p>
+            <p class="descricao-dentista">Especialista em Odontologia estética e restauradora.</p>
+            <p class="descricao-dentista">Especialista em Odontologia Hospitalar.</p>
+            <p class="descricao-dentista">CRO 1035</p>
+            
+            <a href="#" class="btn-dentista">Agendar Consulta</a>
+          </div>
+        </div>
+        <hr>
+        <div class="item-dentistas">
+          <img src="imagens/dra_katia.jpg" alt="" class="img-dentista">
+          <div class="info-dentista">
+            <h2 class="nome-dentista">Dra. Kátia Henriques de Lyra</h2>
+            <p class="descricao-dentista">Especialista em Endodontia.</p>
+            <p class="descricao-dentista">Especialista em Implantodontia.</p>
+            <p class="descricao-dentista">Especialista em Odontologia estética e restauradora.</p>
+            <p class="descricao-dentista">CRO 1735</p>
+            
+            <a href="#" class="btn-dentista">Agendar Consulta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de Implantodontia -->
+    <div id="modal-implantodontia" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Implantodontia</h3>
+        <div class="item-dentistas">
+          <img src="imagens/dra_ana.jpg" alt="" class="img-dentista">
+          <div class="info-dentista">
+            <h2 class="nome-dentista">Dra. Ana de Lourdes Menezes Batista da Costa</h2>
+            <p class="descricao-dentista">Especialista em Implantodontia.</p>
+            <p class="descricao-dentista">Especialista em Próteses sobre implantes e dentes.</p>
+            <p class="descricao-dentista">Especialista em Odontologia estética e restauradora.</p>
+            <p class="descricao-dentista">CRO 1188</p>
+            
+            <a href="#" class="btn-dentista">Agendar Consulta</a>
+          </div>
+        </div>
+        <hr>
+        <div class="item-dentistas">
+          <img src="imagens/equipe3.jpg" alt="" class="img-dentista">
+          <div class="info-dentista">
+            <h2 class="nome-dentista">Dr. José Norberto Bittencourt</h2>
+            <p class="descricao-dentista">Especialista em Implantodontia.</p>
+            <p class="descricao-dentista">Especialista em Próteses sobre implantes e dentes.</p>
+            <p class="descricao-dentista">Especialista em Odontologia estética e restauradora.</p>
+            <p class="descricao-dentista">Especialista em Odontologia Hospitalar.</p>
+            <p class="descricao-dentista">CRO 1035</p>
+            
+            <a href="#" class="btn-dentista">Agendar Consulta</a>
+          </div>
+        </div>
+        <hr>
+        <div class="item-dentistas">
+          <img src="imagens/dra_katia.jpg" alt="" class="img-dentista">
+          <div class="info-dentista">
+            <h2 class="nome-dentista">Dra. Kátia Henriques de Lyra</h2>
+            <p class="descricao-dentista">Especialista em Endodontia.</p>
+            <p class="descricao-dentista">Especialista em Implantodontia.</p>
+            <p class="descricao-dentista">Especialista em Odontologia estética e restauradora.</p>
+            <p class="descricao-dentista">CRO 1735</p>
+            
+            <a href="#" class="btn-dentista">Agendar Consulta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de Endodontia e Tratamentos Específicos -->
+    <div id="modal-endodontia" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Endodontia e Tratamentos Específicos</h3>
+        <div class="item-dentistas">
+          <img src="imagens/dra_katia.jpg" alt="" class="img-dentista">
+          <div class="info-dentista">
+            <h2 class="nome-dentista">Dra. Kátia Henriques de Lyra</h2>
+            <p class="descricao-dentista">Especialista em Endodontia.</p>
+            <p class="descricao-dentista">Especialista em Implantodontia.</p>
+            <p class="descricao-dentista">Especialista em Odontologia estética e restauradora.</p>
+            <p class="descricao-dentista">CRO 1735</p>
+            
+            <a href="#" class="btn-dentista">Agendar Consulta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de Cirurgias -->
+    <div id="modal-cirurgias" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Cirurgias</h3>
+        <div class="item-dentistas">
+          <img src="imagens/dr_rafael.jpg" alt="" class="img-dentista">
+          <div class="info-dentista">
+            <h2 class="nome-dentista">Dr. Rafael Menezes C.G Sales</h2>
+            <p class="descricao-dentista">Especialista en Buco Maxilo.</p>
+            <p class="descricao-dentista">CRO 4196</p>
+            
+            <a href="#" class="btn-dentista">Agendar Consulta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de Odontologia Especializada -->
+    <div id="modal-odontologia" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Odontologia Especializada</h3>
+        <div class="item-dentistas">
+          <img src="imagens/equipe3.jpg" alt="" class="img-dentista">
+          <div class="info-dentista">
+            <h2 class="nome-dentista">Dr. José Norberto Bittencourt</h2>
+            <p class="descricao-dentista">Especialista em Implantodontia.</p>
+            <p class="descricao-dentista">Especialista em Próteses sobre implantes e dentes.</p>
+            <p class="descricao-dentista">Especialista em Odontologia estética e restauradora.</p>
+            <p class="descricao-dentista">Especialista em Odontologia Hospitalar.</p>
+            <p class="descricao-dentista">CRO 1035</p>
+            
+            <a href="#" class="btn-dentista">Agendar Consulta</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
     <script src="slick.js" type="text/javascript" charset="utf-8"></script>
     <script src="script.js" defer></script>

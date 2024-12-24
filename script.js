@@ -37,34 +37,49 @@ $(document).on('ready', function () {
   });
 });
 
-const basePath = window.location.origin + window.location.pathname.substring(0, window.location.pathname.lastIndexOf('/'));
+document.addEventListener('DOMContentLoaded', () => {
+  const modals = {
+    geral: document.getElementById('modal-geral'),
+    estetica: document.getElementById('modal-estetica'),
+    implantodontia: document.getElementById('modal-implantodontia'),
+    endodontia: document.getElementById('modal-endodontia'),
+    cirurgias: document.getElementById('modal-cirurgias'),
+    odontologia: document.getElementById('modal-odontologia'),
+  };
 
-document.getElementById("card-geral").addEventListener("click", function (event) {
-  event.preventDefault();
-  window.open(basePath + '/geral.html', '_blank');
-});
+  const cards = {
+    geral: document.getElementById('card-geral'),
+    estetica: document.getElementById('card-estetica'),
+    implantodontia: document.getElementById('card-implantodontia'),
+    endodontia: document.getElementById('card-endodontia'),
+    cirurgias: document.getElementById('card-cirurgias'),
+    odontologia: document.getElementById('card-odontologia'),
+  };
 
-document.getElementById("card-estetica").addEventListener("click", function (event) {
-  event.preventDefault();
-  window.open(basePath + '/estetica.html', '_blank');
-});
+  Object.keys(cards).forEach((key) => {
+    const card = cards[key];
+    const modal = modals[key];
+    const closeModal = modal.querySelector('.close');
 
-document.getElementById("card-implantodontia").addEventListener("click", function (event) {
-  event.preventDefault();
-  window.open(basePath + '/implantodontia.html', '_blank');
-});
+    card.addEventListener('click', (event) => {
+      event.preventDefault();
+      modal.style.display = 'block';
+      // Bloquear el scroll al abrir el modal
+      document.body.classList.add('modal-open');
+    });
 
-document.getElementById("card-endodontia").addEventListener("click", function (event) {
-  event.preventDefault();
-  window.open(basePath + '/endodontia.html', '_blank');
-});
+    closeModal.addEventListener('click', () => {
+      modal.style.display = 'none';
+      // Restaurar el scroll al cerrar el modal
+      document.body.classList.remove('modal-open');
+    });
 
-document.getElementById("card-cirurgias").addEventListener("click", function (event) {
-  event.preventDefault();
-  window.open(basePath + '/cirurgias.html', '_blank');
-});
-
-document.getElementById("card-avancados").addEventListener("click", function (event) {
-  event.preventDefault();
-  window.open(basePath + '/avancados.html', '_blank');
+    window.addEventListener('click', (event) => {
+      if (event.target === modal) {
+        modal.style.display = 'none';
+        // Restaurar el scroll al hacer clic fuera del modal
+        document.body.classList.remove('modal-open');
+      }
+    });
+  });
 });

@@ -27,6 +27,14 @@ body {
   color: #333;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
+body::-webkit-scrollbar {
+  display: none; 
+}
+
 header {
   background-color: #B0BEC5;
   height: 9vh;
@@ -107,9 +115,6 @@ nav ul li a:hover {
 #nossa-equipe {
   background: #f5f5f5;
 }
-#dentistas {
-  background: #f5f5f5;
-}
 
 #cards {
   display: grid;
@@ -120,8 +125,10 @@ nav ul li a:hover {
 
 .card {
   background: #B0BEC5;
+  color: #333;
   padding: 3vw 3vw;
   text-align: center;
+  text-decoration: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -196,50 +203,12 @@ nav ul li a:hover {
 
 .secao5 {
   width: 100%;
-  padding: 12vh 11vw 20px 11vw
+  padding: 12vh 11vw 20px 11vw;
+  min-height: 70vh;
 }
 .secao6 {
   width: 100%;
   padding: 12vh 11vw 20px 11vw
-}
-.item-dentistas{
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-family: "Lato", sans-serif;
-  font-weight: 350;
-  gap: 30px;
-  margin-bottom: 20px;
-}
-.item-dentistas img{
-  width: 200px;
-  height: 200px;
-  object-fit: cover;
-}
-
-.info-dentista{
-  flex-direction: column;
-  max-height: 100%;
-}
-.info-dentista h2{
-  font-size: 2rem;
-}
-.info-dentista p{
-  font-size: 1.4rem;
-}
-
-.info-dentista a{
-  font-size: 1.6rem;
-  text-decoration: none;
-  font-weight: 500;
-  color: #274D73;
-  border: #274D73 2px solid;
-  border-radius: 5px;
-  padding: 13px 45px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  -ms-border-radius: 5px;
-  -o-border-radius: 5px;
 }
 
 footer {
@@ -252,7 +221,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 150px;
+  gap: 100px;
 }
 
 .footer-column {
@@ -285,8 +254,8 @@ footer {
 
 footer .social-links {
   display: flex;
-  justify-content: center;
   gap: 15px;
+  min-width: 150px;
 }
 
 footer .social-links img {
@@ -326,17 +295,13 @@ footer a:hover {
 
 /* NOVO SLIDER */
 .slick-slider {
-  
   position: relative;
-
   display: block;
   box-sizing: border-box;
-
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
-
   -webkit-touch-callout: none;
   -khtml-user-select: none;
   -ms-touch-action: pan-y;
@@ -346,10 +311,8 @@ footer a:hover {
 
 .slick-list {
   position: relative;
-
   display: block;
   overflow: hidden;
-
   margin: 0;
   padding: 0;
 }
@@ -418,4 +381,135 @@ footer a:hover {
 
 .slick-next {
   right: -6rem;
+}
+
+/* modal */
+.modal {
+  display: none; /* Ocultar por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal hr {
+  margin: 50px 0;
+}
+
+.modal-content {
+  background-color: #fff;
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 60%;
+  position: relative;
+}
+
+.modal-content h3 {
+  font-size: 2.5rem; 
+  font-weight: bold; 
+  text-align: left;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+/* Diseño para los dentistas dentro del modal */
+.item-dentistas {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-family: "Lato", sans-serif;
+  font-weight: 350;
+  gap: 30px;
+  margin-bottom: 20px;
+}
+
+.item-dentistas img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+}
+
+.info-dentista {
+  flex-direction: column;
+  max-height: 100%;
+}
+
+.info-dentista h2 {
+  font-size: 2rem;
+}
+
+.info-dentista p {
+  font-size: 1.4rem;
+}
+
+
+.info-dentista a {
+  display: inline-block;
+  margin-top: 50px;
+  font-size: 1.6rem;
+  text-decoration: none;
+  font-weight: 500;
+  color: #274D73;
+  border: #274D73 2px solid;
+  border-radius: 5px;
+  padding: 13px 45px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+
+
+@media screen and (max-width: 768px) {
+  .modal-content {
+    width: 80%;
+    margin: 5% auto;
+    padding: 10px;
+  }
+
+  .modal-content h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+  }
+
+  .item-dentistas {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .item-dentistas img {
+    width: 150px;
+    height: 150px;
+  }
+
+  .info-dentista {
+    text-align: center;
+  }
+
+  .info-dentista h2 {
+    font-size: 1.6rem;
+  }
+
+  .info-dentista p {
+    font-size: 1.2rem;
+  }
+
+  .info-dentista a {
+    font-size: 1.4rem;
+    padding: 10px 30px;
+  }
 }
