@@ -7,7 +7,15 @@ $(document).on('ready', function () {
     autoplay: true,
     autoplaySpeed: 2000,
     prevArrow: '<a class="slick-prev" style="font-size: 7rem;"><i class="bx bx-chevron-left"></i></a>',
-    nextArrow: '<a class="slick-next" style="font-size: 7rem;"><i class="bx bx-chevron-right"></i></a>'
+    nextArrow: '<a class="slick-next" style="font-size: 7rem;"><i class="bx bx-chevron-right"></i></a>',
+    responsive: [
+      {
+        breakpoint: 600,
+        settings: {
+          arrows: false
+        }
+      }
+    ]
   });
   $(".regular2").slick({
     dots: false,
@@ -31,8 +39,7 @@ $(document).on('ready', function () {
         settings: {
           slidesToShow: 2,
           slidesToScroll: 1,
-          prevArrow: false,
-          nextArrow: false
+          arrows: false
         }
       }
     ]
@@ -95,9 +102,10 @@ menuIcon.addEventListener('click', () => {
 });
 
 menuItems.addEventListener('click', (event) => {
-  if (event.target.tagName === 'A') {
+  if (event.target.tagName === 'A' && menuItems.style.display === 'flex') {
     menuItems.style.display = 'none';
     overlay.style.display = 'none';
+    
   }
 });
 
