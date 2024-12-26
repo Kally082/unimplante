@@ -210,7 +210,6 @@ nav ul li a:hover {
   width: 100%;
   padding: 12vh 11vw 20px 11vw
 }
-
 footer {
   background-color: #333;
   color: white;
@@ -221,7 +220,8 @@ footer {
   display: flex;
   justify-content: center;
   align-items: flex-start;
-  gap: 100px;
+  gap: 8vw;
+  flex-wrap: wrap; /* Permitir que los elementos se ajusten en múltiples líneas */
 }
 
 .footer-column {
@@ -242,14 +242,14 @@ footer {
 .footer-columns {
   display: flex;
   gap: 30px;
-  max-width: 30vw; 
+  max-width: 50vw;
 }
 
 .footer-column iframe {
   display: block;
   margin: 10px auto;
   width: 100%;
-  max-width: 30vw; 
+  max-width: 30vw;
 }
 
 footer .social-links {
@@ -279,6 +279,34 @@ footer a {
 footer a:hover {
   color: #B0BEC5;
 }
+
+/* Estilo para pantallas pequeñas */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column; /* Cambiar a columna para que las secciones se apilen */
+    align-items: center; /* Centrar contenido */
+  }
+
+  .footer-right {
+    margin-top: 20px; /* Añadir espacio entre las secciones */
+    width: 100%; /* Asegurar que use el ancho completo */
+  }
+
+  .footer-columns {
+    flex-direction: column; /* Apilar las columnas una debajo de otra */
+    gap: 20px; /* Ajustar el espacio entre columnas */
+    max-width: 100%; /* Usar el ancho completo */
+  }
+
+  .footer-column iframe {
+    max-width: 100%; /* Asegurar que el iframe se ajuste al ancho del contenedor */
+  }
+
+  footer .social-links {
+    justify-content: center; /* Centrar los íconos sociales */
+  }
+}
+
 
 
 .team{
@@ -397,7 +425,7 @@ footer a:hover {
 }
 
 .modal hr {
-  margin: 50px 0;
+  margin: 20px 0;
 }
 
 .modal-content {
@@ -458,7 +486,7 @@ footer a:hover {
 
 .info-dentista a {
   display: inline-block;
-  margin-top: 50px;
+  margin-top: 20px;
   font-size: 1.6rem;
   text-decoration: none;
   font-weight: 500;
