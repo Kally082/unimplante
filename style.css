@@ -171,7 +171,6 @@ header {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 5vw;
-  margin: 0 3vw;
 }
 
 .card {
@@ -244,12 +243,12 @@ header {
 
 .secao3 {
   width: 100%;
-  padding: 12vh 10vw 0px 10vw
+  padding: 12vh 10vw 0px 10vw;
 }
 
 .secao4 {
   width: 100%;
-  padding: 12vh 10vw 20px 10vw
+  padding: 12vh 10vw 20px 10vw;
 }
 
 .secao5 {
