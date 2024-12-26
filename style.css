@@ -38,21 +38,35 @@ body::-webkit-scrollbar {
 header {
   background-color: #B0BEC5;
   height: 9vh;
-  align-content: center;
   padding-right: 4vw;
+  display: flex;
+  align-items: center;
+  position: relative;
+  z-index: 10;
+  justify-content: flex-end;
 }
 
-nav ul {
+#menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+#menu-items {
   list-style: none;
   display: flex;
   gap: 4vw;
+  margin: 0;
+  padding: 0;
 }
 
-nav ul li {
+#menu-items li {
   display: inline;
 }
 
-nav ul li a {
+#menu-items li a {
   color: #000000;
   text-decoration: none;
   font-weight: normal;
@@ -60,14 +74,51 @@ nav ul li a {
   font-family: "Roboto", sans-serif;
 }
 
-nav ul li a:hover {
+#menu-items li a:hover {
   border-bottom: #000000 1px solid;
 }
 
-#menu {
-  display: flex;
-  justify-content: flex-end;
+#menu-icon {
+  display: none;
+  font-size: 3rem;
+  cursor: pointer;
+  z-index: 15;
 }
+
+@media (max-width: 768px) {
+  #menu-icon {
+    display: block;
+  }
+
+  #menu-items {
+    position: absolute;
+    top: 9vh;
+    right: 0;
+    background-color: #B0BEC5;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 2rem;
+    box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.2);
+    display: none;
+    z-index: 20;
+  }
+
+  #menu-items li {
+    text-align: right;
+  }
+}
+
+#overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
 
 #principal {
   position: relative;
@@ -99,7 +150,7 @@ nav ul li a:hover {
   font-family: "Lato", sans-serif;
   font-weight: 350;
   min-height: 70vh;
-  background-image: url(imagens/conjunto-de-vetores-de-espelho-de-ferramentas-odontologicas-inoxidavel-broca-e-pinca-com-vista-lateral-do-dente-no-fundo.png);
+  background-image: url(imagens/ferramentas.png);
   background-size: 60vh;
   background-repeat: no-repeat;
   background-position: calc(100% - 7vw) bottom;
@@ -221,7 +272,7 @@ footer {
   justify-content: center;
   align-items: flex-start;
   gap: 8vw;
-  flex-wrap: wrap; /* Permitir que los elementos se ajusten en múltiples líneas */
+  flex-wrap: wrap;
 }
 
 .footer-column {
@@ -280,30 +331,29 @@ footer a:hover {
   color: #B0BEC5;
 }
 
-/* Estilo para pantallas pequeñas */
 @media (max-width: 768px) {
   .footer-container {
-    flex-direction: column; /* Cambiar a columna para que las secciones se apilen */
-    align-items: center; /* Centrar contenido */
+    flex-direction: column;
+    align-items: center;
   }
 
   .footer-right {
-    margin-top: 20px; /* Añadir espacio entre las secciones */
-    width: 100%; /* Asegurar que use el ancho completo */
+    margin-top: 20px;
+    width: 100%;
   }
 
   .footer-columns {
-    flex-direction: column; /* Apilar las columnas una debajo de otra */
-    gap: 20px; /* Ajustar el espacio entre columnas */
-    max-width: 100%; /* Usar el ancho completo */
+    flex-direction: column;
+    gap: 20px;
+    max-width: 100%;
   }
 
   .footer-column iframe {
-    max-width: 100%; /* Asegurar que el iframe se ajuste al ancho del contenedor */
+    max-width: 100%;
   }
 
   footer .social-links {
-    justify-content: center; /* Centrar los íconos sociales */
+    justify-content: center;
   }
 }
 
@@ -413,7 +463,7 @@ footer a:hover {
 
 /* modal */
 .modal {
-  display: none; /* Ocultar por defecto */
+  display: none;
   position: fixed;
   z-index: 1000;
   left: 0;
@@ -453,7 +503,6 @@ footer a:hover {
   cursor: pointer;
 }
 
-/* Diseño para los dentistas dentro del modal */
 .item-dentistas {
   display: flex;
   flex-direction: row;

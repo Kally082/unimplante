@@ -30,7 +30,9 @@ $(document).on('ready', function () {
         breakpoint: 600,
         settings: {
           slidesToShow: 2,
-          slidesToScroll: 1
+          slidesToScroll: 1,
+          prevArrow: false,
+          nextArrow: false
         }
       }
     ]
@@ -64,22 +66,42 @@ document.addEventListener('DOMContentLoaded', () => {
     card.addEventListener('click', (event) => {
       event.preventDefault();
       modal.style.display = 'block';
-      // Bloquear el scroll al abrir el modal
       document.body.classList.add('modal-open');
     });
 
     closeModal.addEventListener('click', () => {
       modal.style.display = 'none';
-      // Restaurar el scroll al cerrar el modal
       document.body.classList.remove('modal-open');
     });
 
     window.addEventListener('click', (event) => {
       if (event.target === modal) {
         modal.style.display = 'none';
-        // Restaurar el scroll al hacer clic fuera del modal
         document.body.classList.remove('modal-open');
       }
     });
   });
+});
+
+const menuIcon = document.getElementById('menu-icon');
+const menuItems = document.getElementById('menu-items');
+const overlay = document.getElementById('overlay');
+
+menuIcon.addEventListener('click', () => {
+  const isMenuOpen = menuItems.style.display === 'flex';
+  
+  menuItems.style.display = isMenuOpen ? 'none' : 'flex';
+  overlay.style.display = isMenuOpen ? 'none' : 'block';
+});
+
+menuItems.addEventListener('click', (event) => {
+  if (event.target.tagName === 'A') {
+    menuItems.style.display = 'none';
+    overlay.style.display = 'none';
+  }
+});
+
+overlay.addEventListener('click', () => {
+  menuItems.style.display = 'none';
+  overlay.style.display = 'none';
 });
